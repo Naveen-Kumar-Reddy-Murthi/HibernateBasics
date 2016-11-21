@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>   
+<!DOCTYPE hibernate-configuration PUBLIC   
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">   
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@10.1.60.114:1523:gcaie5</property> -->
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="connection.username">hr</property>
+		<property name="connection.password">hr</property>
+		<property name="connection.pool_size">20</property>
+		<!-- <property name="hibernate.cache.user_second_level_cache">true</property> -->
+		<!-- <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property> -->
+			<!-- Above two tags are mandatory to use second level cache  -->
+		
+		<!-- <property name="hibernate.cache.use_query_cache">true</property> -->
+		<!-- For Query cache to work, second level cache must be enabled  -->
+		
+		
+		<mapping  class="org.mnr.hibernate.entity.UserDetails"/> 
+		<mapping  class="org.mnr.hibernate.entity.User"/> 
+		<mapping  class="org.mnr.hibernate.entity.Person"/> 
+		<mapping  class="org.mnr.hibernate.entity.Car"/> 
+		<mapping  class="org.mnr.hibernate.entity.Engine"/> 
+		<mapping  class="org.mnr.hibernate.entity.Owner"/> 
+		<mapping  class="org.mnr.hibernate.entity.Customer"/> 
+		<mapping  class="org.mnr.hibernate.entity.Order"/>
+		<mapping  class="org.mnr.hibernate.entity.Vehicle"/> 
+		<mapping  class="org.mnr.hibernate.entity.TwoWheeler"/> 
+		<mapping  class="org.mnr.hibernate.entity.FourWheeler"/> 
+		<!-- <mapping resource="Proc_Mapping.xml"/>  -->
+	</session-factory>
+
+</hibernate-configuration>

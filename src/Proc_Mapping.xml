@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<sql-query name="MNR_PRC" callable="true">
+<return-scalar column="MESSAGE" type="string"/> { call MNR_PRC(?,:param1) } </sql-query><!--MESSAGE is actual name of column in MNR_PRC procedure  -->
+</hibernate-mapping>
